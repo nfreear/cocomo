@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "name": "cocomo",
+  "version": "1.0.0-dev",
+  "description": "The Constructive Cost Model (COCOMO) is a procedural software cost estimation model.",
+  "author": "© Nick Freear, 03-May-2018.",
+  "license": "UNLICENSED",
+  "bin": "bin/cocomo.js",
+  "main": "index.js",
+  "dependencies": {
+    "cloc": "^2.3.3",
+    "sloc": "^0.2.0"
+  },
+  "scripts": {
+    "test": "bin/cocomo.js",
+    "test_S": "cloc --exclude-dir=.git --json ~/workspace/cloudworks-copy/*",
+    "test_Y": "bin/cocomo.js --exclude '*.(txt|md)' ~/workspace/cloudworks/*",
+    "test_X": "bin/cocomo.js ~/workspace/safesea/openEssayist-slim/"
+  },
+  "cocomoConfig": {
+    "model": "basic",
+    "coefficients": {
+      "a": 2.4,
+      "b": 1.05,
+      "c": 2.5,
+      "d": 0.38
+    }
+  },
+  "#": [
+    "https://en.wikipedia.org/wiki/COCOMO",
+    "https://openhub.net/p/openessayist/estimated_cost"
+  ]
+}
